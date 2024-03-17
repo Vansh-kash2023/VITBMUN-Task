@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITBMUN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-title">
+            <img src="https://lh3.googleusercontent.com/a-/ALV-UjVXcCNeSKiMHiuYuSqabEzyi0ja7EceSS91ByapUAaUng=s40-p"
+                alt="VITBMUN_Logo">
+            <h2> VITBMUN</h2>
+        </div>
+
+        <div class="nav-links">
+            <ul class="links">
+                <li><a href="/" target="_blank"> Home </a></li>
+                <li><a href="/service" target="_blank"> Service </a></li>
+                <li><a href="/about" target="_blank"> About Us</a></li>
+                <li><a href="/contact" target="_blank"> Contact Us</a></li>
+                <li><a href="tel:+1234567890" id="call" target="_blank"> Call Us </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="banner">
+        <div><img src="src/MUN hall.jpg" alt="Image 1"></div>
+        <div><img src="src/russia.jpg" alt="Image 2"></div>
+        <div><img src="src/flags.jpg" alt="Image 3"></div>
+    </div>
+
+    <!-- jQuery (necessary for Slick) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Slick JavaScript file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Your custom script to initialize Slick -->
+    <script>
+        $(document).ready(function () {
+            $('.banner').slick({
+                autoplay: true,
+                autoplaySpeed: 2000, // Adjust speed as needed
+                dots: true // Enable dots for navigation
+            });
+        });
+    </script>
+</body>
+<script src="script.js"></script>
+
+</html>
