@@ -11,10 +11,10 @@
 :root {
     --nav-bg-color: rgb(0, 0, 0);
 }
-
+/* 
 html {}
 
-body {}
+body {} */
 
 
 .navbar {
@@ -70,10 +70,10 @@ body {}
     text-decoration: none;
     /* padding: 13px 10px 13px 10px; */
 }
-
+/* 
 .menu-icon {
     display: none;
-}
+} */
 
 /* CSS to ensure images cover the area properly */
 
@@ -86,7 +86,7 @@ body {}
 }
 
 /* Ensure images cover the area */
-.banner img {
+.banner div img {
     width: 100%;
     /* Make images fill the container width */
     height: 100%;
