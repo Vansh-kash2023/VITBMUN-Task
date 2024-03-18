@@ -75,26 +75,22 @@ body {} */
     display: none;
 } */
 
-/* CSS to ensure images cover the area properly */
-
-/* Set banner container to full width */
-.banner {
-    width: 100%;
+/* Set the height and width for all images */
+.swiper-container .swiper-slide img {
+    width: 100%; /* Make images fill the container width */
+    height: 90vh; /* Make images fill the container height */
+    object-fit: cover; /* Maintain aspect ratio without cropping */
+  }
+  
+  /* Ensure the images don't overflow and overlap */
+  .swiper-container {
     overflow: hidden;
-    height: 90vh;
-    border: 2px solid black;
-}
-
-/* Ensure images cover the area */
-.banner div img {
-    width: 100%;
-    /* Make images fill the container width */
-    height: 100%;
-    /* Maintain aspect ratio */
-    object-fit: cover;
-    /* Cover the container without stretching */
-}
-
+  }
+  
+  .swiper-slide {
+    position: relative; /* Ensure images don't overlap */
+  }
+  
 
 @media (max-width:1000px) {
     .navbar {
