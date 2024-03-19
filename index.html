@@ -10,10 +10,15 @@
     <!-- Heading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link
         href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Inter:wght@100..900&family=Shippori+Antique&display=swap"
         rel="stylesheet">
-    <!-- Cards -->
+    <!-- Contact -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    
 
 
 </head>
@@ -29,13 +34,22 @@
                     alt="VITBMUN_Logo">
                 <h2> VITBMUN</h2>
             </div>
-
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <div class="nav--expanded" id="expanded">
+                    <ul class="nav--block" onclick={togglelink}>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#aim">Aim</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <!-- <li><a href="tel:+1234567890" id="call"> Call Us </a></li> -->
+                    </ul>
+                </div>
             <div class="nav-links">
                 <ul class="links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#aim">Aim</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                     <!-- <li><a href="tel:+1234567890" id="call"> Call Us </a></li> -->
                 </ul>
             </div>
@@ -48,12 +62,11 @@
                 <div class="swiper-slide"><img src="src/india.jpg" alt="Image 1"></div>
                 <div class="swiper-slide"><img src="src/pic.jpg" alt="Image 2"></div>
                 <div class="swiper-slide"><img src="src/flags-2.jpg" alt="Image 3"></div>
-            </div>
-            <!-- Add pagination -->
-            <div class="swiper-pagination"></div>
+                <div class="swiper-pagination"></div>
             <!-- Add navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+            </div>
         </div>
     </section>
 
@@ -81,17 +94,78 @@
                 <div class="medium-8 column">
                     <h1>What are we?</h1>
                     <br>
+                    <div class="para">
                     <p>
                         The MUN Club at VIT Bhopal University is a vibrant group of students passionate about global affairs and diplomacy. Our club provides a platform for students to engage in Model United Nations simulations, honing their debate, negotiation, and leadership skills. Through dynamic discussions and resolutions, we empower members to address pressing international issues and foster a deeper understanding of diplomacy. Join us to connect with like-minded peers, enact positive change through policy-making, and become confident global citizens. Together, let’s shape a brighter and more united future at the MUN Club!
                     </p>
+                </div>
                 </div>
             </div>
         </article>
         
     </section>
 
+    <section class="contact" id="contact">
+        <footer class="footer">
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <div class="contact-details">
+                <p>Dr. Saravanan J.(100141)</p>
+                <p>saravanan.j@vitbhopal.ac.in</p>
+            </div>
+            <ul class="social-icon">
+                <!-- <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a></li> -->
+                <li class="social-icon__item"><a class="social-icon__link" href="https://in.linkedin.com/in/vitbmun">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/vitb.mun/">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a></li>
+            </ul>
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="#aim">Aim</a></li>
+                <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+                <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+    
+            </ul>
+            <p>VITBMUN | All Rights Reserved</p>
+        </footer>
+    </section>
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+<script>
+    (function () {
+        const locomotiveScroll = new LocomotiveScroll({
+    lenisOptions: {
+        wrapper: window,
+        content: document.documentElement,
+        lerp: 0.1,
+        duration: 0.5,
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: false,
+        smoothTouch: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 2,
+        normalizeWheel: true,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+    },
+});
+
+    })();
+</script>
+
 
 </html>
